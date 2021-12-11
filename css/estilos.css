@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+/* main font family */
+@font-face {
+    font-family: .face;
+    src: url();
+}
+/* Global varibales for CBLS */
+--main-color: ;
+--secundary-color: ;
+--main-font: ;
+--main-title: ;
+--main-paragraph: ;
+--main-section-size: ;
+--main-button: ;
+--main-text-button: ;
+--main-icon-size: ;
+
+.box-container{
+    display: flex;
+    border: 1px solid #000;
+    margin-top: 100px;
+    padding: 2px;
+}
+
+/* tooltip container */
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin: auto;
+}
+/* Tooltip text */
+.tooltip-text{
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin: auto;
+    border-radius: 6px;
+    /*Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+/* Tooltip arrow */
+.tooltip .tooltip-text::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when mouse over */
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
