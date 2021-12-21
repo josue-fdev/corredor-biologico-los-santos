@@ -1,46 +1,100 @@
 *{
     box-sizing: border-box;
+    font-family: Roboto;
 }
 /* main font family */
 @font-face {
-    font-family: .face;
+    font-family: ;
     src: url();
 }
-/* Global varibales for CBLS */
---main-color: ;
---secundary-color: ;
---main-font: ;
---main-title: ;
---main-paragraph: ;
---main-section-size: ;
---main-button: ;
---main-text-button: ;
---main-icon-size: ;
-
+/* Global variables for CBLS */
+:root{
+    --main-color: #66AA2A;
+    /* variables de textos */
+    --main-text-menu: 2rem;
+    --main-title: 4rem;
+    --main-subtitles: 2.5rem;
+    --main-paragraph: 1.5rem;
+    /* variables del button  */
+    --main-button-color: #66AA2A;
+    --main-button-border-radius: 5px;
+    --main-button-text-size: 2rem;
+    --main-button-text-color: #fff;
+    /* variables de espaciado */
+    --main-width: 1200px;
+    --main-padding: 100px;
+}
+body{
+    padding: var(--main-padding);
+}
+#quienes-somos{
+    width: var(--main-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.title h1{
+    flex: 1 1 100%;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: var(--main-title);
+}
+.mision-vision{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-evenly; 
+    font-size: var(--main-paragraph);
+}
+.mision{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.mision i{
+    flex: 1 1 100%;
+}
+.mision p{
+    flex: 1 1 100%;
+}
+.vision{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+}
+span{
+    color: var(--main-color);
+    font-size: calc(1.5rem * 1);
+    text-transform: uppercase;
+}
+#quienes-somos .logo{
+    width: var(--main-width);
+    z-index: -1;
+    opacity: 0.6;
+}
 .box-container{
+    flex: 1 1 100%;
     display: flex;
     border: 1px solid #000;
-    margin-top: 100px;
+    margin: 0 0 100px 0;
     padding: 2px;
 }
-
 /* tooltip container */
 .tooltip{
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
     margin: auto;
+    padding: 1rem;
+    font-size: var(--main-paragraph);
 }
 /* Tooltip text */
 .tooltip-text{
-    visibility: hidden;
-    width: 120px;
     background-color: #555;
     color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 5px;
     margin: auto;
-    border-radius: 6px;
+    border-radius: var(--main-button-border-radius);
+
     /*Position the tooltip text */
     position: absolute;
     z-index: 1;
@@ -49,6 +103,7 @@
     margin-left: -60px;
 
     /* Fade in tooltip */
+    visibility: hidden;
     opacity: 0;
     transition: opacity 1s;
 }
@@ -61,11 +116,20 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: var(--main-color) transparent transparent transparent;
 }
-
 /* Show the tooltip text when mouse over */
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
+    background-color: var(--main-color);
+    color: var(--main-button-text-color);
+}
+.leer-mas{
+    background-color: var(--main-color);
+    color: var(--main-button-text-color);
+    font-size: var(--main-button-text-size);
+}
+.leer-mas:hover{
+    letter-spacing: 0.5rem;;
 }
