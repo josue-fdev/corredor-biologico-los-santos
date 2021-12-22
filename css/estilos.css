@@ -34,6 +34,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    border: 1px none #000;
+    box-shadow: 0px 10px 30px 20px rgb(184, 187, 180);
+    border-radius: var(--main-button-border-radius);
 }
 /* TITULO */
 .title h1{
@@ -41,16 +44,23 @@ body{
     color: var(--main-color);
     text-transform: uppercase;
     font-size: var(--main-title);
+    margin-bottom: var(--main-padding);
+    box-shadow: 0px 10px 10px rgb(184, 187, 180);
 }
-.title .title-1{
+.title h1 .title-1{
     color: #000;
     font-size: var(--main-titles);
 }
-.title h1:hover{
+.title:hover h1{   
     color: black;
 }
-.title .title-1:hover{
-    color: var(--main-color)
+.title:hover h1 .title-1{
+    color: var(--main-color);
+}
+.mision span, .vision span{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--main-color);
 }
 /* MISION Y VISION */
 .mision-vision{
@@ -59,24 +69,31 @@ body{
     width: var(--main-width);
     font-size: var(--main-paragraph);
     flex-wrap: wrap;
+    box-shadow: 0px 10px 10px rgb(184, 187, 180);
 }
 .mision{
-    flex: 1 1 50%;
+    flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
-    border: none;
-    border-right: 0.3rem solid #66AA2A; 
+    border: none; 
 }
 .mision i{ flex: 1 1 100%; }
 .mision p{ flex: 1 1 100%; }
+/* hr{
+    flex: 1 1 2%;
+    border: none;
+    border-left: 5px double var(--main-color);
+    height: 100px;
+    color: var(--main-color);
+} */
 .vision{
-    flex: 1 1 50%;
+    flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
 }
 .vision i{ flex: 1 1 100%; }
 .vision p{ flex: 1 1 100%; }
-span{
+.somos{
     color: var(--main-color);
     font-size: calc(1.5rem * 1);
     text-transform: uppercase;
@@ -86,23 +103,38 @@ i{
     color: var(--main-color);
     font-size: var(--main-subtitles);
 }
+/* -------------------------- */
 #quienes-somos .logo{
-    width: var(--main-width);
-    z-index: -1;
-    opacity: 0.6;
+    width: 1000px;
+    height: 90%;
+    opacity: 1;
+    border-bottom: none;
+    /* position: relative;
+    left: 0px;
+    top: 120px;
+    z-index: -1; */
 }
+/* #quienes-somos .logo:hover{
+    opacity: 1;
+} */
 .box-container{
     flex: 1 1 100%;
     display: flex;
-    border: 1px solid #000;
-    margin: 0 0 100px 0;
+    box-shadow: 0px 10px 10px rgb(184, 187, 180);
+    border-bottom: 5px double var(--main-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0 100px 100px 100px;
     padding: 2px;
+    justify-content: center;
+    background-color: white;
 }
 /* tooltip container */
 .tooltip{
     position: relative;
     display: inline-block;
-    margin: auto;
+    margin: none;
     padding: 1rem;
     font-size: var(--main-paragraph);
 }
@@ -143,11 +175,17 @@ i{
     background-color: var(--main-color);
     color: var(--main-button-text-color);
 }
+/* BOTON */
 .leer-mas{
     background-color: var(--main-color);
     color: var(--main-button-text-color);
     font-size: var(--main-button-text-size);
+    margin-bottom: var(--main-padding);
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--main-button-border-radius);
+    box-shadow: 0px 10px 10px rgb(184, 187, 180);
 }
 .leer-mas:hover{
-    letter-spacing: 0.5rem;;
+    letter-spacing: 0.5rem;
 }
