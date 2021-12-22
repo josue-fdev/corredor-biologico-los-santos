@@ -3,11 +3,8 @@
     font-family: Roboto;
 }
 /* main font family */
-@font-face {
-    font-family: ;
-    src: url();
-}
-/* Global variables for CBLS */
+
+/*--------- Variables globales for CBLS ---------- */
 :root{
     --main-color: #66AA2A;
     /* variables de textos */
@@ -21,15 +18,16 @@
     --main-button-text-size: 2rem;
     --main-button-text-color: #fff;
     /* variables de espaciado */
-    --main-width: 1200px;
-    --main-padding: 100px;
+    --main-width: 80vw;
+    --main-padding: 10vw;
 }
 body{
     padding: var(--main-padding);
 }
-/* seccion Quienes Somos */
+/* ------------- SECCION QUIENES SOMOS ---------------- */
 #quienes-somos{
     width: var(--main-width);
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,13 +36,13 @@ body{
     box-shadow: 0px 10px 30px 20px rgb(184, 187, 180);
     border-radius: var(--main-button-border-radius);
 }
-/* TITULO */
+/*  TITULO  */
 .title h1{
     flex: 1 1 100%;
     color: var(--main-color);
     text-transform: uppercase;
     font-size: var(--main-title);
-    margin-bottom: var(--main-padding);
+    margin: 10vw 0vw 0vw 0vw;
     box-shadow: 0px 10px 10px rgb(184, 187, 180);
 }
 .title h1 .title-1{
@@ -62,14 +60,14 @@ body{
     font-weight: 900;
     color: var(--main-color);
 }
-/* MISION Y VISION */
+/*  MISION Y VISION  */
 .mision-vision{
     flex: 1 1 100%;
     display: flex;
     width: var(--main-width);
     font-size: var(--main-paragraph);
     flex-wrap: wrap;
-    box-shadow: 0px 10px 10px rgb(184, 187, 180);
+    margin: 10vw 10vw 10vw 10vw;
 }
 .mision{
     flex: 1 1 100%;
@@ -103,12 +101,13 @@ i{
     color: var(--main-color);
     font-size: var(--main-subtitles);
 }
-/* -------------------------- */
+/*  LOGO   */
 #quienes-somos .logo{
-    width: 1000px;
+    width: 80vw;
     height: 90%;
     opacity: 1;
     border-bottom: none;
+    margin: 0vw 10vw 0vw 10vw;
     /* position: relative;
     left: 0px;
     top: 120px;
@@ -117,18 +116,20 @@ i{
 /* #quienes-somos .logo:hover{
     opacity: 1;
 } */
+/*  CONTENEDOR OPCIONES  */
 .box-container{
     flex: 1 1 100%;
     display: flex;
+    flex-wrap: wrap;
     box-shadow: 0px 10px 10px rgb(184, 187, 180);
     border-bottom: 5px double var(--main-color);
     border-top: none;
     border-left: none;
     border-right: none;
-    margin: 0 100px 100px 100px;
+    margin: 10vw 10vw 10vw 10vw;
     padding: 2px;
-    justify-content: center;
     background-color: white;
+    justify-content: center;
 }
 /* tooltip container */
 .tooltip{
@@ -168,7 +169,7 @@ i{
     border-style: solid;
     border-color: var(--main-color) transparent transparent transparent;
 }
-/* Show the tooltip text when mouse over */
+/* tooltip text when mouse over */
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
@@ -176,16 +177,66 @@ i{
     color: var(--main-button-text-color);
 }
 /* BOTON */
-.leer-mas{
+.mas{
+    font-size: var(--main-button-text-size);
     background-color: var(--main-color);
     color: var(--main-button-text-color);
-    font-size: var(--main-button-text-size);
     margin-bottom: var(--main-padding);
     padding: 0.5rem;
     border: none;
     border-radius: var(--main-button-border-radius);
     box-shadow: 0px 10px 10px rgb(184, 187, 180);
 }
-.leer-mas:hover{
+.mas:hover{
     letter-spacing: 0.5rem;
 }
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .title h1{
+        font-size: calc(4rem / 2);
+    }
+    .mision-vision{
+        font-size: calc(2rem / 2);
+    }
+    i{
+        font-size: calc(2.5rem / 2);
+    }
+    #quienes-somos .logo {
+        width: 80vw;
+        height: 90%;
+    }
+    .box-container .tooltip{
+        font-size: calc(2.5rem / 2);
+    }
+    .tooltip-text{
+        font-size: calc(2rem / 2);
+    }
+    .mas{
+        font-size: calc(2rem / 2);
+    }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+    .title h1{
+        font-size: calc(4rem / 2);
+    }
+    .mision-vision{
+        font-size: calc(2rem / 2);
+    }
+    i{
+        font-size: calc(2.5rem / 2);
+    }
+    #quienes-somos .logo {
+        width: 80vw;
+        height: 90%;
+    }
+    .box-container .tooltip{
+        font-size: calc(2.5rem / 2);
+    }
+    .tooltip-text{
+        font-size: calc(2rem / 2);
+    }
+    .mas{
+        font-size: calc(2rem / 2);
+    }
+}
+/* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
