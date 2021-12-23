@@ -9,13 +9,13 @@
     --main-color: #66AA2A;
     /* variables de textos */
     --main-text-menu: 2rem;
-    --main-title: 4rem;
+    --main-title: 2rem;
     --main-subtitles: 2.5rem;
-    --main-paragraph: 1.5rem;
+    --main-paragraph: 1rem;
     /* variables del button  */
     --main-button-color: #66AA2A;
     --main-button-border-radius: 5px;
-    --main-button-text-size: 2rem;
+    --main-button-text-size: 1rem;
     --main-button-text-color: #fff;
     /* variables de espaciado */
     --main-width: 80vw;
@@ -25,15 +25,14 @@ body{
     padding: var(--main-padding);
 }
 /* ------------- SECCION QUIENES SOMOS ---------------- */
-#quienes-somos{
+#quienes-somos, #boletin-noticias{
     width: var(--main-width);
-    margin: auto;
+    margin: 0px auto 0px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    border: 1px none #000;
-    box-shadow: 0px 10px 30px 20px rgb(184, 187, 180);
+    box-shadow: -0px -0px 10px 3px rgb(215, 235, 190);
     border-radius: var(--main-button-border-radius);
 }
 /*  TITULO  */
@@ -42,8 +41,11 @@ body{
     color: var(--main-color);
     text-transform: uppercase;
     font-size: var(--main-title);
-    margin: 10vw 0vw 0vw 0vw;
-    box-shadow: 0px 10px 10px rgb(184, 187, 180);
+    margin: 0vw;
+    position: relative;
+    left: 0px;
+    top: 110px;
+    font-weight: 900;
 }
 .title h1 .title-1{
     color: #000;
@@ -55,47 +57,45 @@ body{
 .title:hover h1 .title-1{
     color: var(--main-color);
 }
-.mision span, .vision span{
-    text-transform: uppercase;
-    font-weight: 900;
-    color: var(--main-color);
-}
-/*  MISION Y VISION  */
-.mision-vision{
-    flex: 1 1 100%;
-    display: flex;
-    width: var(--main-width);
-    font-size: var(--main-paragraph);
-    flex-wrap: wrap;
-    margin: 10vw 10vw 10vw 10vw;
-}
-.mision{
-    flex: 1 1 100%;
-    display: flex;
-    flex-wrap: wrap;
-    border: none; 
-}
-.mision i{ flex: 1 1 100%; }
-.mision p{ flex: 1 1 100%; }
-/* hr{
-    flex: 1 1 2%;
-    border: none;
-    border-left: 5px double var(--main-color);
-    height: 100px;
-    color: var(--main-color);
-} */
-.vision{
-    flex: 1 1 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.vision i{ flex: 1 1 100%; }
-.vision p{ flex: 1 1 100%; }
 .somos{
     color: var(--main-color);
     font-size: calc(1.5rem * 1);
     text-transform: uppercase;
     font-weight: 900;
+}
+
+/*  MISION Y VISION  */
+.mision-vision{
+    flex: 1 1 100%;
+    /* display: block;
+    flex-flow: column wrap;
+    row-gap: 10px;
+    width: auto; */
+    font-size: var(--main-paragraph);
+    margin: 0vw 10vw 0vw 10vw;
+    position: relative;
+    left: 0px;
+    top: 130px;
+}
+.mision, .vision{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: none; 
+    margin-bottom: 10px;
+}
+.mision i, .mision p{ 
+    flex: 1 1 100%;
+    margin: 0px;
+}
+.vision i, .vision p{ 
+    flex: 1 1 100%;
+    margin: 0px;
+}
+.mision span, .vision span{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--main-color);
 }
 i{
     color: var(--main-color);
@@ -103,30 +103,24 @@ i{
 }
 /*  LOGO   */
 #quienes-somos .logo{
-    width: 80vw;
-    height: 90%;
+    width: auto;
+    height: 50vh;
     opacity: 1;
     border-bottom: none;
     margin: 0vw 10vw 0vw 10vw;
-    /* position: relative;
+    position: relative;
     left: 0px;
-    top: 120px;
-    z-index: -1; */
+    top: 130px;
+    z-index: -1;
 }
-/* #quienes-somos .logo:hover{
-    opacity: 1;
-} */
 /*  CONTENEDOR OPCIONES  */
 .box-container{
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0px 10px 10px rgb(184, 187, 180);
-    border-bottom: 5px double var(--main-color);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin: 10vw 10vw 10vw 10vw;
+    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+    border: none;
+    margin: 5vw 10vw 5vw 10vw;
     padding: 2px;
     background-color: white;
     justify-content: center;
@@ -149,8 +143,8 @@ i{
     /*Position the tooltip text */
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 50%;
+    bottom: 100%;
+    /* left: -50%; */
     margin-left: -60px;
 
     /* Fade in tooltip */
@@ -164,7 +158,7 @@ i{
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-left: -5px;
+    /* margin-left: -5px; */
     border-width: 5px;
     border-style: solid;
     border-color: var(--main-color) transparent transparent transparent;
@@ -176,21 +170,17 @@ i{
     background-color: var(--main-color);
     color: var(--main-button-text-color);
 }
-/* BOTON */
-.mas{
-    font-size: var(--main-button-text-size);
-    background-color: var(--main-color);
-    color: var(--main-button-text-color);
-    margin-bottom: var(--main-padding);
-    padding: 0.5rem;
-    border: none;
-    border-radius: var(--main-button-border-radius);
-    box-shadow: 0px 10px 10px rgb(184, 187, 180);
+#info-org{
+    display: none;
+    background-color: #66AA2A;
+    width: 60vw;
+    height: 20vw;
+    position: relative;
+    left: 0px;
+    top: -395px;
+    z-index: 100;
 }
-.mas:hover{
-    letter-spacing: 0.5rem;
-}
-
+/* MEDIAS */
 @media (min-width: 400px) and (max-width: 600px) {
     .title h1{
         font-size: calc(4rem / 2);
@@ -204,6 +194,10 @@ i{
     #quienes-somos .logo {
         width: 80vw;
         height: 90%;
+        position: relative;
+        left: 0px;
+        top: 10px;
+        z-index: 1;
     }
     .box-container .tooltip{
         font-size: calc(2.5rem / 2);
@@ -213,6 +207,17 @@ i{
     }
     .mas{
         font-size: calc(2rem / 2);
+    }
+    .boletin{
+        flex: 1 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0px var(--main-padding) 0px var(--main-padding);
+        column-gap: 1vw; 
+        position: relative;
+        left: -100px;
+        top: 500px;
+        z-index: -10;
     }
 }
 @media (min-width: 601px) and (max-width: 1000px) {
@@ -240,3 +245,59 @@ i{
     }
 }
 /* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
+.boletin-noticias{
+    width: var(--main-width);
+    padding: var(--main-padding);
+    display: flex;
+    flex-wrap: wrap;
+    /* max-height: 100vh; */
+}
+.boletin{
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px var(--main-padding) 0px var(--main-padding);
+    column-gap: 1vw; 
+    position: relative;
+    left: 0px;
+    bottom: -300px;
+    z-index: 1;
+    background-color: #66AA2A;
+}
+.uno, .dos{
+    /* flex: 1 1 100%; */
+    height: 20vw;
+    width: 40%;
+    border-radius: var(--main-button-border-radius);
+}
+.noticias{
+    flex: 1 1 70%;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+.noticia{
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 1vw;
+    /* width: 40vw; */
+}
+.noticia .cuerpo{ 
+    flex: 1 1 70%;
+    border-bottom: 2px dotted #66AA2A;
+    margin: 0px;
+}
+.noticia .cuerpo:hover{ 
+    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+}
+.noticias .noticia .tres, .noticias .noticia .cuatro, .noticias .noticia .cinco{
+    flex: 1 1 30%;
+    width: 10vw;
+
+    /* height: 10vw; */
+    border-radius: var(--main-button-border-radius);
+}
+#recursos div{
+    height: 100vh;
+    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+}

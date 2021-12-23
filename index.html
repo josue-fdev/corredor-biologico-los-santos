@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <section id="quienes-somos">
@@ -15,20 +16,19 @@
         </div>
         <div class="mision-vision">
             <div class="mision">
-                <i class="far fa-flag"></i>
+                <!-- <i class="far fa-flag"></i> -->
                 <p>¡Nuestra <span>mision</span> de conservar las areas de vida silvestre!</p>
             </div>
             <!-- <hr> -->
             <div class="vision">
-                <i class="far fa-eye"></i>
+                <!-- <i class="far fa-eye"></i> -->
                 <p>¡Una <span>vision</span> por mantenerlas sostenibles!</p>
             </div>
         </div>
         <img src="img/cbls-logo.png" alt="logo-cbls" class="logo">
         <div class="box-container">
-            <div class="tooltip">
-                Organizacion
-                <br>
+            <div class="tooltip onclick="document.getElementById('info-org').style.display='block'">
+                    Organizacion
                 <span class="tooltip-text">
                     Asamblea y Comite
                 </span>
@@ -55,7 +55,51 @@
                 </span>
             </div>
         </div>
-        <button class="mas">Más</button>
+        <div id="info-org">
+            <p>La comunidad CBLS constituida por una Asamblea mejora las labores ambientales<br></p>
+            <p>El comite participa de las accciones ambientales<br></p>
+        </div>      
     </section>
+    <!-- FIN SECCION QUIENES SOMOS -->
+    <!-- INICIO SECCION BOLETIN Y NOTCIAS -->
+   <section id="boletin-noticias">
+        <div class="title">
+            <h1>Boletin &<span class="title-1">Noticias</span></h1>
+        </div>
+        <div class="boletin-noticias">
+            <div class="noticias">
+                <div class="noticia">
+                    <div class="cuerpo">
+                        <h5>New</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, iure!</p>
+                    </div>
+                    <img class="tres" src="img/Reforestacion.jfif" alt="">
+                <div class="noticia">
+                    <div class="cuerpo">
+                        <h5>New</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, iure!</p>
+                    </div>
+                    <img class="tres" src="img/Reforestacion.jfif" alt="">
+                </div>
+                <div class="noticia">
+                    <div class="cuerpo">
+                        <h5>New</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, iure!</p>
+                    </div>
+                    <img class="tres" src="img/Reforestacion.jfif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="boletin">
+            <img class="uno" src="img/Captura de pantalla (184).png" alt="">
+            <img class="dos" src="img/concurso.jfif" alt="">
+        </div>
+    </section> 
+    <!-- FIN SECCION BOLETIN Y NOTCIAS -->
+    <!-- INICIO SECCION -->
+    <section id="recursos">
+        <div></div>
+    </section>
+    <!-- FIN SECCION -->
 </body>
 </html>
