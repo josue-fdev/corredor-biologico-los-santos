@@ -44,7 +44,7 @@ body{
     margin: 0vw;
     position: relative;
     left: 0px;
-    top: 110px;
+    top: 60px;
     font-weight: 900;
 }
 .title h1 .title-1{
@@ -75,7 +75,7 @@ body{
     margin: 0vw 10vw 0vw 10vw;
     position: relative;
     left: 0px;
-    top: 130px;
+    top: 70px;
 }
 .mision, .vision{
     flex: 1 1 100%;
@@ -110,7 +110,7 @@ i{
     margin: 0vw 10vw 0vw 10vw;
     position: relative;
     left: 0px;
-    top: 130px;
+    top: 50px;
     z-index: -1;
 }
 /*  CONTENEDOR OPCIONES  */
@@ -167,18 +167,22 @@ i{
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
-    background-color: var(--main-color);
-    color: var(--main-button-text-color);
+    background-color: #fff;
+    color: #000;
+    z-index: 20;
 }
 #info-org{
     display: none;
-    background-color: #66AA2A;
+    background-color: #fff;
     width: 60vw;
-    height: 20vw;
+    height: 30vw;
     position: relative;
     left: 0px;
-    top: -395px;
-    z-index: 100;
+    top: -532px;
+    z-index: 10;
+}
+#info-org {
+    padding: var(--main-padding);
 }
 /* MEDIAS */
 @media (min-width: 400px) and (max-width: 600px) {
@@ -192,11 +196,15 @@ i{
         font-size: calc(2.5rem / 2);
     }
     #quienes-somos .logo {
-        width: 80vw;
+        width: 60vw;
         height: 90%;
         position: relative;
-        left: 0px;
-        top: 10px;
+        top: 75px;
+        z-index: -1;
+    }
+    .box-container{
+        position: relative;
+        top: 75px;
         z-index: 1;
     }
     .box-container .tooltip{
@@ -216,8 +224,14 @@ i{
         column-gap: 1vw; 
         position: relative;
         left: -100px;
-        top: 500px;
+        top: 100px;
         z-index: -10;
+    }
+    #info-org{
+        height: 54vw;
+        position: relative;
+        top: -405px;
+        z-index: 1;
     }
 }
 @media (min-width: 601px) and (max-width: 1000px) {
@@ -262,7 +276,6 @@ i{
     left: 0px;
     bottom: -300px;
     z-index: 1;
-    background-color: #66AA2A;
 }
 .uno, .dos{
     /* flex: 1 1 100%; */
