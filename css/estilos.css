@@ -190,6 +190,57 @@ i{
     border-radius: var(--main-button-border-radius);
 }
 /* MEDIAS */
+@media (min-width: 205px) and (max-width: 405px) {
+    .title h1{
+        font-size: calc(4rem / 2);
+    }
+    .mision-vision{
+        font-size: calc(2rem / 2);
+    }
+    i{
+        font-size: calc(2.5rem / 2);
+    }
+    #quienes-somos .logo {
+        width: var(--main-width);
+        height: 100%;
+    }
+    /* BOX CONTAINER */
+    .box-container .tooltip{
+        font-size: calc(2.5rem / 2);
+    }
+    .tooltip-text{
+        font-size: calc(2rem / 2);
+    }
+    .mas{
+        font-size: calc(2rem / 2);
+    }
+    .boletin{
+        flex: 1 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0px var(--main-padding) 0px var(--main-padding);
+        column-gap: 1vw; 
+        position: relative;
+        left: -100px;
+        top: 100px;
+        z-index: -10;
+    }
+    #info{
+        width: 0;
+        height: 0px;
+        margin: var(--main-padding);
+        position: relative;
+        top: 0px;
+        z-index: 3;
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 67vw;
+        left: 10vw;
+        top: 17vw;
+        position: fixed;
+        z-index: 3;
+    }
+}
 @media (min-width: 405px) and (max-width: 610px) {
     .title h1{
         font-size: calc(4rem / 2);
