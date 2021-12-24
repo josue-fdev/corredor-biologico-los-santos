@@ -21,6 +21,9 @@
     --main-width: 80vw;
     --main-padding: 10vw;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     padding: var(--main-padding);
 }
@@ -167,27 +170,27 @@ i{
     height: 0px;
     margin: var(--main-padding);
     position: relative;
-    top: -80px;
-    left: -412px;
+    top: 0px;
+    left: 0px;
     z-index: 3;
 }
 #info-org, #info-nacimiento, #info-territorio, #info-motivo{
     display: none;
     width: 60vw;
     height: 30vw;
-    background-image: linear-gradient(to bottom,#66aa2a, #ffffff);
-    color: #000;
     margin: var(--main-padding);
+    padding: var(--main-padding);
     position: relative;
-    left: -135px;
-    top: -667px;
+    left: -545px;
+    top: -767px;
     z-index: 10;
+    color: #000;
+    background-image: linear-gradient(to bottom,#66aa2a, #ffffff);
     box-shadow: -0px -0px 10px 1px rgb(226, 231, 219);
     border-radius: var(--main-button-border-radius);
-    padding: var(--main-padding);
 }
 /* MEDIAS */
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 405px) and (max-width: 610px) {
     .title h1{
         font-size: calc(4rem / 2);
     }
@@ -198,8 +201,8 @@ i{
         font-size: calc(2.5rem / 2);
     }
     #quienes-somos .logo {
-        width: 60vw;
-        height: 50vw;
+        width: 100%;
+        height: 100%;
     }
     /* BOX CONTAINER */
     .box-container .tooltip{
@@ -232,13 +235,13 @@ i{
     }
     #info-org, #info-nacimiento, #info-territorio, #info-motivo{
         height: 67vw;
-        left: 39vw;
-        top: -110vw;
+        left: 10vw;
+        top: 13vw;
         position: fixed;
         z-index: 3;
     }
 }
-@media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 605px) and (max-width: 1000px) {
     .title h1{
         font-size: calc(4rem / 2);
     }
@@ -249,7 +252,7 @@ i{
         font-size: calc(2.5rem / 2);
     }
     #quienes-somos .logo {
-        width: 60vw;
+        width: 100%;
         height: 100%;
     }
     .box-container .tooltip{
@@ -263,17 +266,17 @@ i{
     }
     #info{
         width: 0px;
-        height: 100%;
+        height: 0px;
         position: relative;
-        top: -400px;
-        left: -270px;
+        top: 0px;
+        left: 0px;
         z-index: 10;
-        background-color: rgb(214, 147, 59);
     }
     #info-org, #info-nacimiento, #info-territorio, #info-motivo{
         height: 300px;
         position: relative;
-        top: 0px;
+        top: -705px;
+        left: -260px;
         z-index: 10;
     }
 }
