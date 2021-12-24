@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
     <section id="quienes-somos">
@@ -27,45 +28,62 @@
         </div>
         <img src="img/cbls-logo.png" alt="logo-cbls" class="logo">
         <div class="box-container">
-            <div class="tooltip" onclick="document.getElementById('info-org').style.display='block'">
+            <div class="tooltip" >
                     Organizacion
-                <span class="tooltip-text">
+                <span id="org" class="tooltip-text">
                     Asamblea y Comite
                 </span>
             </div>
             <div class="tooltip">
                 Nacimiento
                 <br>
-                <span class="tooltip-text">
+                <span id="nacimiento" class="tooltip-text">
                     2015
                 </span>
             </div>
             <div class="tooltip">
                 Territorio
                 <br>
-                <span class="tooltip-text">
+                <span id="territorio" class="tooltip-text">
                     Pacifico Central
                 </span>
             </div>
             <div class="tooltip">
                 Motivo
                 <br>
-                <span class="tooltip-text">
+                <span id="motivo" class="tooltip-text">
                     Conservacion
                 </span>
             </div>
         </div>
-        <div id="info-org">
-            <span onclick="document.getElementById('info-org').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-            <p>La comunidad CBLS constituida por una Asamblea mejora las labores ambientales<br></p>
-            <p>El comite participa de las accciones ambientales<br></p>
-        </div>      
+        <div id="info">
+            <div id="info-org">
+                <span onclick="document.getElementById('info-org').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>La comunidad CBLS constituida por una Asamblea mejora las labores ambientales<br></p>
+                <p>El comite participa de las accciones ambientales<br></p>
+            </div>
+            <div id="info-nacimiento">
+                <span onclick="document.getElementById('info-nacimiento').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, libero.<br></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, iure.<br></p>
+            </div>
+            <div id="info-territorio">
+                <span onclick="document.getElementById('info-territorio').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum sint animi aliquam explicabo? Tenetur sint, autem unde odio nisi quidem?<br></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique harum obcaecati neque, quam quidem numquam!<br></p>
+            </div>
+            <div id="info-motivo">
+                <span onclick="document.getElementById('info-motivo').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <p>La comunidad CBLS constituida por una Asamblea mejora las labores ambientales<br></p>
+                <p>El comite participa de las accciones ambientales<br></p>
+            </div>      
+        </div>
     </section>
     <!-- FIN SECCION QUIENES SOMOS -->
     <!-- INICIO SECCION BOLETIN Y NOTCIAS -->
    <section id="boletin-noticias">
         <div class="title">
-            <h1>Boletin &<span class="title-1">Noticias</span></h1>
+            <h1>Boletin <span class="title-1">informativo</span></h1>
         </div>
         <div class="boletin-noticias">
             <div class="noticias">
@@ -102,5 +120,6 @@
         <div></div>
     </section>
     <!-- FIN SECCION -->
+    <script src="js/script.js"></script>
 </body>
 </html>

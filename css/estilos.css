@@ -27,7 +27,7 @@ body{
 /* ------------- SECCION QUIENES SOMOS ---------------- */
 #quienes-somos, #boletin-noticias{
     width: var(--main-width);
-    margin: 0px auto 0px auto;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -41,10 +41,7 @@ body{
     color: var(--main-color);
     text-transform: uppercase;
     font-size: var(--main-title);
-    margin: 0vw;
-    position: relative;
-    left: 0px;
-    top: 60px;
+    margin: 5vw 0 2vw 0;
     font-weight: 900;
 }
 .title h1 .title-1{
@@ -73,9 +70,6 @@ body{
     width: auto; */
     font-size: var(--main-paragraph);
     margin: 0vw 10vw 0vw 10vw;
-    position: relative;
-    left: 0px;
-    top: 70px;
 }
 .mision, .vision{
     flex: 1 1 100%;
@@ -108,22 +102,18 @@ i{
     opacity: 1;
     border-bottom: none;
     margin: 0vw 10vw 0vw 10vw;
-    position: relative;
-    left: 0px;
-    top: 50px;
-    z-index: -1;
 }
 /*  CONTENEDOR OPCIONES  */
 .box-container{
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0px 10px 10px rgb(215, 235, 190);
-    border: none;
-    margin: 5vw 10vw 5vw 10vw;
-    padding: 2px;
-    background-color: white;
     justify-content: center;
+    margin: 0vw 10vw 0vw 10vw;
+    padding: 2px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 10px 10px rgb(215, 235, 190);
 }
 /* tooltip container */
 .tooltip{
@@ -144,8 +134,7 @@ i{
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    /* left: -50%; */
-    margin-left: -60px;
+    left: 5%; 
 
     /* Fade in tooltip */
     visibility: hidden;
@@ -153,35 +142,48 @@ i{
     transition: opacity 1s;
 }
 /* Tooltip arrow */
-.tooltip .tooltip-text::after{
+/* .tooltip .tooltip-text::after{
     content: "";
     position: absolute;
     top: 100%;
     left: 50%;
-    /* margin-left: -5px; */
+    margin: 0px;
     border-width: 5px;
     border-style: solid;
     border-color: var(--main-color) transparent transparent transparent;
-}
+} */
 /* tooltip text when mouse over */
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
-    background-color: #fff;
+    background-color: #66AA2A;
+   
+    box-shadow: 1px 10px 10px rgb(141, 226, 38);
     color: #000;
     z-index: 20;
 }
-#info-org{
+#info{
+    width: 0px;
+    height: 0px;
+    margin: var(--main-padding);
+    position: relative;
+    top: -80px;
+    left: -412px;
+    z-index: 3;
+}
+#info-org, #info-nacimiento, #info-territorio, #info-motivo{
     display: none;
-    background-color: #fff;
     width: 60vw;
     height: 30vw;
+    background-image: linear-gradient(to bottom,#66aa2a, #ffffff);
+    color: #000;
+    margin: var(--main-padding);
     position: relative;
-    left: 0px;
-    top: -532px;
+    left: -135px;
+    top: -667px;
     z-index: 10;
-}
-#info-org {
+    box-shadow: -0px -0px 10px 1px rgb(226, 231, 219);
+    border-radius: var(--main-button-border-radius);
     padding: var(--main-padding);
 }
 /* MEDIAS */
@@ -197,16 +199,9 @@ i{
     }
     #quienes-somos .logo {
         width: 60vw;
-        height: 90%;
-        position: relative;
-        top: 75px;
-        z-index: -1;
+        height: 50vw;
     }
-    .box-container{
-        position: relative;
-        top: 75px;
-        z-index: 1;
-    }
+    /* BOX CONTAINER */
     .box-container .tooltip{
         font-size: calc(2.5rem / 2);
     }
@@ -227,11 +222,20 @@ i{
         top: 100px;
         z-index: -10;
     }
-    #info-org{
-        height: 54vw;
+    #info{
+        width: 0;
+        height: 0px;
+        margin: var(--main-padding);
         position: relative;
-        top: -405px;
-        z-index: 1;
+        top: 0px;
+        z-index: 3;
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 67vw;
+        left: 39vw;
+        top: -110vw;
+        position: fixed;
+        z-index: 3;
     }
 }
 @media (min-width: 601px) and (max-width: 1000px) {
@@ -245,8 +249,8 @@ i{
         font-size: calc(2.5rem / 2);
     }
     #quienes-somos .logo {
-        width: 80vw;
-        height: 90%;
+        width: 60vw;
+        height: 100%;
     }
     .box-container .tooltip{
         font-size: calc(2.5rem / 2);
@@ -256,6 +260,21 @@ i{
     }
     .mas{
         font-size: calc(2rem / 2);
+    }
+    #info{
+        width: 0px;
+        height: 100%;
+        position: relative;
+        top: -400px;
+        left: -270px;
+        z-index: 10;
+        background-color: rgb(214, 147, 59);
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 300px;
+        position: relative;
+        top: 0px;
+        z-index: 10;
     }
 }
 /* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
@@ -301,7 +320,7 @@ i{
     margin: 0px;
 }
 .noticia .cuerpo:hover{ 
-    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+    box-shadow: 0px 10px 10px rgb(226, 231, 219);
 }
 .noticias .noticia .tres, .noticias .noticia .cuatro, .noticias .noticia .cinco{
     flex: 1 1 30%;
