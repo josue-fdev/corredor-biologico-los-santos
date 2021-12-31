@@ -68,26 +68,28 @@ html{
     flex: 1 1 100%;
     display: flex;
     flex-flow: row wrap;
-    width: var(--main-width);
+    /* width: var(--main-width); */
     padding: 0px var(--main-padding);
-    /* column-gap: 0px; */
-    /* margin: 0px; */
+    column-gap: 0px;
     font-size: var(--main-paragraph);
 }
 .mision, .vision{
-    flex: 1 1 100%;
-    display: flex;
+    flex: 1 1 50%;
+    margin: auto;
+    display: block;
     flex-wrap: wrap;
     border: none;
-    margin-bottom: 10px;
+    justify-content: center;
+    padding: 0px 0px 0px 280px;
 }
-.mision i, .mision p{
-    flex: 1 1 100%;
-    margin: 0px;
+.vision{
+    padding: 0px 280px 0px 0px;
 }
-.vision i, .vision p{
-    flex: 1 1 100%;
-    margin: 0px;
+.mision i{
+    flex: 1 1 50%;
+}
+.vision i{
+    flex: 1 1 50%;
 }
 .mision span, .vision span{
     text-transform: uppercase;
@@ -178,7 +180,7 @@ i{
     left: 0px;
     z-index: 3;
 }
-#info-org, #info-nacimiento, #info-territorio, #info-motivo{
+#info-org, #info-nacimiento, #info-territorio, #info-motivo, #info-mision{
     display: none;
     width: 60vw;
     height: 400px;
@@ -191,6 +193,8 @@ i{
     color: #000;
     background-color: #ffff;
     border-radius: var(--main-button-border-radius);
+    overflow: scroll;
+    border: 1px solid #66AA2A;
 }
 /* MEDIAS */
 @media (min-width: 850px) and (max-width: 1199px) {
@@ -398,7 +402,7 @@ i{
     width: 100%;
     border-radius: var(--main-button-border-radius);
 }
-.dos{ 
+.dos{
     display: none;
     height: 30vw;
     width: 40%;
