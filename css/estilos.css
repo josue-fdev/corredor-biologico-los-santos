@@ -21,21 +21,20 @@
     --main-width: 80vw;
     --main-padding: 10vw;
 }
+/* transitionaly animation menu */
 html{
     scroll-behavior: smooth;
 }
-body{
-    padding: var(--main-padding);
-}
+
 /* ------------- SECCION QUIENES SOMOS ---------------- */
 #quienes-somos, #boletin-noticias{
-    width: var(--main-width);
-    margin: 0px;
+    height: 100vh;
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     text-align: center;
-    box-shadow: -0px -0px 10px 3px rgb(215, 235, 190);
+    box-shadow: -0px -0px 10px 3px rgb(230, 233, 227);
     border-radius: var(--main-button-border-radius);
 }
 /*  TITULO  */
@@ -51,7 +50,7 @@ body{
     color: #000;
     font-size: var(--main-titles);
 }
-.title:hover h1{   
+.title:hover h1{
     color: black;
 }
 .title:hover h1 .title-1{
@@ -67,25 +66,26 @@ body{
 /*  MISION Y VISION  */
 .mision-vision{
     flex: 1 1 100%;
-    /* display: block;
-    flex-flow: column wrap;
-    row-gap: 10px;
-    width: auto; */
+    display: flex;
+    flex-flow: row wrap;
+    width: var(--main-width);
+    padding: 0px var(--main-padding);
+    /* column-gap: 0px; */
+    /* margin: 0px; */
     font-size: var(--main-paragraph);
-    margin: 0vw 10vw 0vw 10vw;
 }
 .mision, .vision{
     flex: 1 1 100%;
     display: flex;
     flex-wrap: wrap;
-    border: none; 
+    border: none;
     margin-bottom: 10px;
 }
-.mision i, .mision p{ 
+.mision i, .mision p{
     flex: 1 1 100%;
     margin: 0px;
 }
-.vision i, .vision p{ 
+.vision i, .vision p{
     flex: 1 1 100%;
     margin: 0px;
 }
@@ -100,24 +100,27 @@ i{
 }
 /*  LOGO   */
 #quienes-somos .logo{
-    width: 100%;
-    height: 100%;
-    padding: var(--main-padding);
+    width: 40%;
+    height: 50%;
     opacity: 1;
-    border-bottom: none;
-    margin: 0vw 10vw 0vw 10vw;
+    position: relative;
+    z-index: 1;
+    border-radius: 80px;
+    /* box-shadow: 1px 1px 1px #bdc2b9; */
 }
 /*  CONTENEDOR OPCIONES  */
 .box-container{
     flex: 1 1 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    /* flex-wrap: wrap; */
     justify-content: center;
-    margin: 0vw 10vw 0vw 10vw;
+    text-align: center;
+    margin: 0px 25vw 0px 25vw;
+    width: 60vw;
     padding: 2px;
     border: none;
     background-color: white;
-    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+    box-shadow: 0px 1px 1px rgb(230, 233, 227);
 }
 /* tooltip container */
 .tooltip{
@@ -138,7 +141,7 @@ i{
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 5%; 
+    left: 5%;
 
     /* Fade in tooltip */
     visibility: hidden;
@@ -154,16 +157,16 @@ i{
     margin: 0px;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--main-color) transparent transparent transparent;
+    border-color:var(--main-color) transparent transparent transparent;
 }
 /* tooltip text when mouse over */
 .tooltip:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
-    background-color: #66AA2A;
-   
-    box-shadow: 1px 10px 10px rgb(141, 226, 38);
-    color: #000;
+    background-color: var(--main-color);
+
+    /* box-shadow: 1px 1px 1px rgb(28, 134, 153); */
+    color: #fff;
     z-index: 20;
 }
 #info{
@@ -178,145 +181,18 @@ i{
 #info-org, #info-nacimiento, #info-territorio, #info-motivo{
     display: none;
     width: 60vw;
-    height: 30vw;
+    height: 400px;
     margin: var(--main-padding);
     padding: var(--main-padding);
     position: relative;
     left: -545px;
-    top: -767px;
+    top: -740px;
     z-index: 10;
     color: #000;
-    /* background-color: #ffff; */
-    background-image: linear-gradient(to top,#def1cc, #ffffff); 
-    box-shadow: -0px -0px 10px 1px rgb(226, 231, 219);
+    background-color: #ffff;
     border-radius: var(--main-button-border-radius);
 }
 /* MEDIAS */
-@media (min-width: 205px) and (max-width: 400px) {
-    .title h1{
-        font-size: calc(4rem / 2);
-    }
-    .mision-vision{
-        font-size: calc(2rem / 2);
-    }
-    i{
-        font-size: calc(2.5rem / 2);
-    }
-    #quienes-somos .logo {
-        width: 100%;
-        height: 100%;
-        padding: var(--main-padding);
-    }
-    /* BOX CONTAINER */
-    .box-container .tooltip{
-        font-size: calc(2.5rem / 2);
-    }
-    .tooltip-text{
-        font-size: calc(2rem / 2);
-    }
-    .mas{
-        font-size: calc(2rem / 2);
-    }
-    .boletin{
-        flex: 1 1 100%;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 0px var(--main-padding) 0px var(--main-padding);
-        column-gap: 1vw; 
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: -10;
-    }
-    #info{
-        width: 0;
-        height: 0px;
-        margin: var(--main-padding);
-        position: absolute;
-        top: 0px;
-        z-index: 3;
-    }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
-        height: 100%;
-        left: 0vw;
-        top: 10vw;
-        position: absolute;
-        z-index: 3;
-    }
-}
-@media (min-width: 401px) and (max-width: 550px) {
-    #quienes-somos .logo {
-        width: 100%;
-        height: 100%;
-        padding: var(--main-padding);
-    }
-    #info{
-        width: 0;
-        height: 0px;
-        margin: var(--main-padding);
-        position: absolute;
-        top: 0px;
-        /* z-index: 3; */
-    }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
-        height: 100%;
-        left: 0vw;
-        top: 6vw;
-        position: absolute;
-        z-index: 3;
-    }
-}
-@media (min-width: 551px) and (max-width: 849px) {
-    .title h1{
-        font-size: calc(4rem / 2);
-    }
-    .mision-vision{
-        font-size: calc(2rem / 2);
-    }
-    i{
-        font-size: calc(2.5rem / 2);
-    }
-    #quienes-somos .logo {
-        width: 100%;
-        height: 100%;
-        padding: var(--main-padding);
-    }
-    /* BOX CONTAINER */
-    .box-container .tooltip{
-        font-size: calc(2.5rem / 2);
-    }
-    .tooltip-text{
-        font-size: calc(2rem / 2);
-    }
-    .mas{
-        font-size: calc(2rem / 2);
-    }
-    .boletin{
-        flex: 1 1 100%;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 0px var(--main-padding) 0px var(--main-padding);
-        column-gap: 1vw; 
-        position: relative;
-        left: -100px;
-        top: 100px;
-        z-index: -10;
-    }
-    #info{
-        width: 0;
-        height: 0px;
-        margin: var(--main-padding);
-        position: absolute;
-        top: 0px;
-        z-index: 3;
-    }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
-        left: 0vw;
-        top: 3vw;
-        position: absolute;
-        z-index: 3;
-    }
-}
 @media (min-width: 850px) and (max-width: 1199px) {
     .title h1{
         font-size: calc(4rem / 2);
@@ -328,8 +204,12 @@ i{
         font-size: calc(2.5rem / 2);
     }
     #quienes-somos .logo {
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 50%;
+        opacity: 1;
+        position: relative;
+        /* z-index: -1; */
+        margin: 0px;
         padding: var(--main-padding);
     }
     .box-container .tooltip{
@@ -350,43 +230,187 @@ i{
         z-index: 10;
     }
     #info-org, #info-nacimiento, #info-territorio, #info-motivo{
-        height: 100%;
+        height: 400px;
         position: absolute;
         top: 1vw;
         left: 0px;
         z-index: 10;
     }
 }
+@media (min-width: 551px) and (max-width: 849px) {
+    .title h1{
+        font-size: calc(4rem / 2);
+    }
+    .mision-vision{
+        font-size: calc(2rem / 2);
+    }
+    i{
+        font-size: calc(2.5rem / 2);
+    }
+    #quienes-somos .logo {
+        width: 100%;
+        height: 50%;
+        opacity: 1;
+        position: relative;
+        top: -30px;
+        /* z-index: -1; */
+        padding: var(--main-padding);
+    }
+    /* BOX CONTAINER */
+    .box-container .tooltip{
+        font-size: calc(2.5rem / 2);
+    }
+    .tooltip-text{
+        font-size: calc(2rem / 2);
+    }
+    .mas{
+        font-size: calc(2rem / 2);
+    }
+    .boletin{
+        flex: 1 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0px var(--main-padding) 0px var(--main-padding);
+        column-gap: 1vw;
+        position: relative;
+        left: -100px;
+        top: 100px;
+        z-index: -10;
+    }
+    #info{
+        width: 0;
+        height: 0px;
+        margin: var(--main-padding);
+        position: absolute;
+        top: 0px;
+        z-index: 3;
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 400px;
+        left: 0vw;
+        top: 3vw;
+        position: absolute;
+        z-index: 3;
+    }
+}
+@media (min-width: 401px) and (max-width: 550px) {
+    #quienes-somos .logo {
+        width: 100%;
+        height: 50%;
+        padding: var(--main-padding);
+    }
+    #info{
+        width: 0;
+        height: 0px;
+        margin: var(--main-padding);
+        position: absolute;
+        top: 0px;
+        /* z-index: 3; */
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 400px;
+        left: 0vw;
+        top: 6vw;
+        position: absolute;
+        z-index: 3;
+    }
+}
+@media (min-width: 205px) and (max-width: 400px) {
+    .title h1{
+        font-size: calc(4rem / 3);
+    }
+    .mision-vision{
+        font-size: calc(2rem / 2.5);
+    }
+    i{
+        font-size: calc(2.5rem / 2.5);
+    }
+    #quienes-somos .logo {
+        width: 100%;
+        height: 50%;
+        opacity: 0.6;
+        position: relative;
+        /* z-index: 1; */
+        padding: var(--main-padding);
+    }
+    /* BOX CONTAINER */
+    .box-container .tooltip{
+        font-size: calc(2.5rem / 3);
+    }
+    .tooltip-text{
+        font-size: calc(2rem / 3);
+    }
+    .mas{
+        font-size: calc(2rem / 3);
+    }
+    .boletin{
+        flex: 1 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0px var(--main-padding) 0px var(--main-padding);
+        column-gap: 1vw;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -10;
+    }
+    #info{
+        width: 0;
+        height: 0px;
+        margin: var(--main-padding);
+        position: absolute;
+        top: 0px;
+        z-index: 3;
+    }
+    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+        height: 400px;
+        left: 0vw;
+        top: 10vw;
+        position: absolute;
+        z-index: 3;
+    }
+}
+
+
+
 /* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
 .boletin-noticias{
     width: var(--main-width);
-    height: 100%;
-    padding: var(--main-padding);
+    /* height: 100vh; */
+    /* padding: 0px var(--main-padding); */
     display: flex;
     flex-flow: row wrap;
-    /* max-height: 100vh; */
 }
 .boletin{
-    flex: 1 1 100%;
+    flex: 1 1 30%;
     display: flex;
     flex-flow: row wrap;
-    padding: 0px var(--main-padding) 0px var(--main-padding);
-    column-gap: 1vw; 
+    padding: 0px var(--main-padding) 50px 0px;
+    column-gap: 1vw;
     position: relative;
     left: 0px;
-    top: -100px;
+    top: 0px;
     z-index: 1;
 }
-.uno, .dos{
-    /* flex: 1 1 100%; */
-    height: 20vw;
-    width: 40%;
+.uno{
+    flex: 1 1 100%;
+    height: 100%;
+    width: 100%;
     border-radius: var(--main-button-border-radius);
 }
+.dos{ 
+    display: none;
+    height: 30vw;
+    width: 40%;
+    border-radius: var(--main-button-border-radius);
+    position: relative;
+    right: -830px;
+}
 .noticias{
-    flex: 1 1 70%;
+    flex: 1 1 50%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 .noticia{
     flex: 1 1 100%;
@@ -395,14 +419,11 @@ i{
     row-gap: 1vw;
     /* width: 40vw; */
 }
-.noticia .cuerpo{ 
+.noticia .cuerpo{
     flex: 1 1 70%;
-    border-bottom: 2px dotted #66AA2A;
     margin: 0px;
 }
-.noticia .cuerpo:hover{ 
-    box-shadow: 0px 10px 10px rgb(226, 231, 219);
-}
+.noticia .cuerpo:hover{box-shadow: 0px 1px 1px rgb(230, 233, 227);}
 .noticias .noticia .tres, .noticias .noticia .cuatro, .noticias .noticia .cinco{
     flex: 1 1 30%;
     width: 10vw;
