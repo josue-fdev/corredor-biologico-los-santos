@@ -2,14 +2,16 @@ var m = document.getElementById('mision');
 var o = document.getElementById('org');
 var n = document.getElementById('nacimiento');
 var t = document.getElementById('territorio');
-// var m = document.getElementById('motivo');
-var m = $('#motivo');
+var m = document.getElementById('motivo');
+// var m = $('#motivo');
+
 
 var mision = document.getElementById('info-mision');
 var org = document.getElementById('info-org');
 var nacimiento = document.getElementById('info-nacimiento');
 var territorio = document.getElementById('info-territorio');
 var motivo = document.getElementById('info-motivo');
+
 
 m.onclick = () => {
     mision.style.display = "block";

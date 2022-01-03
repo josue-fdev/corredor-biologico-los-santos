@@ -25,9 +25,12 @@
 html{
     scroll-behavior: smooth;
 }
+/* body{
+    padding: var(--main-padding);
+} */
 
 /* ------------- SECCION QUIENES SOMOS ---------------- */
-#quienes-somos, #boletin-noticias{
+#quienes-somos, #boletin-noticias, #proyectos{
     height: 100vh;
     margin: auto;
     display: flex;
@@ -39,7 +42,7 @@ html{
 }
 /*  TITULO  */
 .title h1{
-    /* flex: 1 1 100%; */
+    flex: 1 1 100%;
     width: var(--main-width);
     color: var(--main-color);
     text-transform: uppercase;
@@ -63,13 +66,13 @@ html{
     text-transform: uppercase;
     font-weight: 900;
 }
-
+/* 
 /*  MISION Y VISION  */
-.mision-vision{
+/* .mision-vision{
     flex: 1 1 100%;
     display: flex;
     flex-flow: row wrap;
-    /* width: var(--main-width); */
+    width: var(--main-width);
     padding: 0px var(--main-padding);
     column-gap: 0px;
     font-size: var(--main-paragraph);
@@ -85,12 +88,10 @@ html{
 }
 .vision{
     padding: 0px 200px 0px 0px;
-}
-.mision i{
+} */
+.tooltip i{
     flex: 1 1 100%;
-}
-.vision i{
-    flex: 1 1 100%;
+    color: #000;
 }
 .mision span, .vision span{
     text-transform: uppercase;
@@ -105,17 +106,16 @@ i{
 #quienes-somos .logo{
     width: 50%;
     height: 50%;
-    opacity: 0.1;
+    opacity: 1;
     position: relative;
     z-index: 1;
     border-radius: 80px;
-    /* box-shadow: 1px 1px 1px #bdc2b9; */
 }
 /*  CONTENEDOR OPCIONES  */
 .box-container{
     flex: 1 1 100%;
     display: block;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     margin: 25px 25vw 0px 25vw;
@@ -181,7 +181,7 @@ i{
     left: 0px;
     z-index: 3;
 }
-#info-org, #info-nacimiento, #info-territorio, #info-motivo, #info-mision{
+#info-mision, #info-org, #info-nacimiento, #info-territorio, #info-motivo {
     display: none;
     width: 60vw;
     height: 400px;
@@ -195,8 +195,13 @@ i{
     background-color: #ffff;
     border-radius: var(--main-button-border-radius);
     overflow: scroll;
-    border: 1px solid #66AA2A;
+    scrollbar-width: normal;
+    scrollbar-color: rgb(219, 157, 157);
+    border-left: 1px solid #66AA2A;
+    border-top: 1px solid #66AA2A;
+
 }
+
 /* MEDIAS */
 @media (min-width: 850px) and (max-width: 1199px) {
     .title h1{
@@ -234,7 +239,7 @@ i{
         left: 0px;
         z-index: 10;
     }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+    #info-org, #info-territorio, #info-territorio, #info-motivo{
         height: 400px;
         position: absolute;
         top: 1vw;
@@ -290,7 +295,7 @@ i{
         top: 0px;
         z-index: 3;
     }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+    #info-org, #info-territorio, #info-territorio, #info-motivo{
         height: 400px;
         left: 0vw;
         top: 3vw;
@@ -312,7 +317,7 @@ i{
         top: 0px;
         /* z-index: 3; */
     }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+    #info-org, #info-territorio, #info-territorio, #info-motivo{
         height: 400px;
         left: 0vw;
         top: 6vw;
@@ -367,7 +372,7 @@ i{
         top: 0px;
         z-index: 3;
     }
-    #info-org, #info-nacimiento, #info-territorio, #info-motivo{
+    #info-org, #info-territorio, #info-territorio, #info-motivo{
         height: 400px;
         left: 0vw;
         top: 10vw;
@@ -376,13 +381,40 @@ i{
     }
 }
 
+/* Seccion de proyectos */
+#proyectos{
+    background-color: yellowgreen;
+    position : relative;
+}
+#proyectos .box-proyectos{
+    display: block;
+}
+#proyectos .box-proyectos .items-proyectos{
+    flex: 1 1 100%;
+    background:#fff;
+    width: 100px;
+    height: 400px;
+}
+#proyectos .box {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 200px;
+}
+#proyectos .box .items{
+    flex: 1 1 25%;
+    background:#fff;
+    width: 150px;
+    height: 200px;
+    margin: 2px;
+}
 
 
 /* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
 .boletin-noticias{
     width: var(--main-width);
-    /* height: 100vh; */
-    /* padding: 0px var(--main-padding); */
+    height: 100vh;
+    padding: 0px var(--main-padding);
     display: flex;
     flex-flow: row wrap;
 }
@@ -390,26 +422,14 @@ i{
     flex: 1 1 30%;
     display: flex;
     flex-flow: row wrap;
-    padding: 0px var(--main-padding) 50px 0px;
-    column-gap: 1vw;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
+    margin: auto;
 }
 .uno{
     flex: 1 1 100%;
-    height: 100%;
-    width: 100%;
-    border-radius: var(--main-button-border-radius);
-}
-.dos{
-    display: none;
     height: 30vw;
-    width: 40%;
+    width: 20vw;
     border-radius: var(--main-button-border-radius);
-    position: relative;
-    right: -830px;
+    padding: 0px 10px 10px 0px;
 }
 .noticias{
     flex: 1 1 50%;
@@ -421,22 +441,18 @@ i{
     flex: 1 1 100%;
     display: flex;
     flex-flow: row wrap;
-    row-gap: 1vw;
-    /* width: 40vw; */
+    margin: auto;
 }
 .noticia .cuerpo{
     flex: 1 1 70%;
     margin: 0px;
 }
-.noticia .cuerpo:hover{box-shadow: 0px 1px 1px rgb(230, 233, 227);}
+.noticia .cuerpo:hover{box-shadow: 0px 1px 1px rgb(28, 29, 28);}
 .noticias .noticia .tres, .noticias .noticia .cuatro, .noticias .noticia .cinco{
     flex: 1 1 30%;
-    width: 10vw;
+    width: 4vw;
 
     /* height: 10vw; */
     border-radius: var(--main-button-border-radius);
-}
-#recursos div{
-    height: 100vh;
-    box-shadow: 0px 10px 10px rgb(215, 235, 190);
+    padding-bottom: 1px;
 }
