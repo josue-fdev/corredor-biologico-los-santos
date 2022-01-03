@@ -383,33 +383,21 @@ i{
 
 /* Seccion de proyectos */
 #proyectos{
-    background-color: yellowgreen;
     position : relative;
 }
-#proyectos .box-proyectos{
-    display: block;
-}
-#proyectos .box-proyectos .items-proyectos{
-    flex: 1 1 100%;
-    background:#fff;
-    width: 100px;
-    height: 400px;
-}
-#proyectos .box {
+#proyectos .box-proyectos {
     display: flex;
     flex-flow: row wrap;
     position: absolute;
     top: 200px;
 }
-#proyectos .box .items{
+#proyectos .box-proyectos .items-proyectos{
     flex: 1 1 25%;
-    background:#fff;
+    background:#66AA2A;
     width: 150px;
     height: 200px;
     margin: 2px;
 }
-
-
 /* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
 .boletin-noticias{
     width: var(--main-width);
