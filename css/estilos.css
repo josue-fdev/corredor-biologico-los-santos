@@ -25,9 +25,10 @@
 html{
     scroll-behavior: smooth;
 }
-/* body{
+body{
+    background-image: linear-gradient(to bottom, #fff, #a5c48b, #000);
     padding: var(--main-padding);
-} */
+}
 
 /* ------------- SECCION QUIENES SOMOS ---------------- */
 #quienes-somos, #boletin-noticias, #proyectos{
@@ -39,6 +40,7 @@ html{
     text-align: center;
     box-shadow: -0px -0px 10px 3px rgb(230, 233, 227);
     border-radius: var(--main-button-border-radius);
+    background-color: #fff;
 }
 /*  TITULO  */
 .title h1{
@@ -47,7 +49,8 @@ html{
     color: var(--main-color);
     text-transform: uppercase;
     font-size: var(--main-title);
-    margin: 5vw 0 2vw 0;
+    /* add margin top of the nav size */
+    margin: 5vw 0 0 0;
     font-weight: 900;
 }
 .title h1 .title-1{
@@ -66,7 +69,7 @@ html{
     text-transform: uppercase;
     font-weight: 900;
 }
-/* 
+/*
 /*  MISION Y VISION  */
 /* .mision-vision{
     flex: 1 1 100%;
@@ -104,7 +107,7 @@ i{
 }
 /*  LOGO   */
 #quienes-somos .logo{
-    width: 50%;
+    width: 60%;
     height: 50%;
     opacity: 1;
     position: relative;
@@ -118,9 +121,9 @@ i{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    margin: 25px 25vw 0px 25vw;
-    width: 60vw;
-    padding: 2px;
+    margin: 50px 10vw 0px 10vw;
+    /* width: 40vw; */
+    /* padding: 2px; */
     border: none;
     background-color: white;
     box-shadow: 0px 1px 1px rgb(230, 233, 227);
@@ -405,17 +408,16 @@ i{
     padding: 0px var(--main-padding);
     display: flex;
     flex-flow: row wrap;
+    margin: auto; add.
 }
 .boletin{
     flex: 1 1 30%;
     display: flex;
     flex-flow: row wrap;
-    margin: auto 10px auto auto;
+    margin: 20px 10px auto auto;
 }
 .uno{
     flex: 1 1 100%;
-    height: 28vw;
-    width: 20vw;
     border-radius: var(--main-button-border-radius);
     padding: 0px 10px 10px 0px;
 }
@@ -423,7 +425,7 @@ i{
     flex: 1 1 50%;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 20px auto auto auto;
 }
 .noticia{
     flex: 1 1 100%;
