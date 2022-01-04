@@ -206,7 +206,7 @@ i{
 }
 
 /* MEDIAS */
-@media (min-width: 850px) and (max-width: 1199px) {
+@media (min-width: 990px) {
     .title h1{
         font-size: calc(4rem / 2);
     }
@@ -218,12 +218,17 @@ i{
     }
     #quienes-somos .logo {
         width: 80%;
-        height: 50%;
+        height: 90%;
         opacity: 1;
+        /* margin: auto; */
         position: relative;
-        /* z-index: -1; */
-        margin: 0px;
+        top: -80px;
         padding: var(--main-padding);
+    }
+    .box-container{
+        position: relative;
+        top: -200px;
+        z-index: 5;
     }
     .box-container .tooltip{
         font-size: calc(2.5rem / 2);
@@ -240,45 +245,33 @@ i{
         position: absolute;
         top: 0px;
         left: 0px;
-        z-index: 10;
+        z-index: 3;
     }
     #info-org, #info-territorio, #info-territorio, #info-motivo{
-        height: 400px;
+        height: 420px;
         position: absolute;
         top: 1vw;
         left: 0px;
         z-index: 10;
     }
 }
-@media (min-width: 551px) and (max-width: 849px) {
-    .title h1{
-        font-size: calc(4rem / 2);
-    }
-    .mision-vision{
-        font-size: calc(2rem / 2);
-    }
-    i{
-        font-size: calc(2.5rem / 2);
-    }
+@media (min-width: 551px) and (max-width: 989px) {
+    #quienes-somos { height: auto; }
+    #quienes-somos .logo { display: none; }
+    .title h1 { font-size: calc(4rem / 2);}
+    .mision-vision { font-size: calc(2rem / 2);}
+    i { font-size: calc(2.5rem / 2);}
     #quienes-somos .logo {
         width: 100%;
-        height: 50%;
+        height: 100%;
         opacity: 1;
-        position: relative;
-        top: -30px;
-        /* z-index: -1; */
         padding: var(--main-padding);
     }
     /* BOX CONTAINER */
-    .box-container .tooltip{
-        font-size: calc(2.5rem / 2);
-    }
-    .tooltip-text{
-        font-size: calc(2rem / 2);
-    }
-    .mas{
-        font-size: calc(2rem / 2);
-    }
+    .box-container { display: flex;}
+    .box-container .tooltip { font-size: calc(2.5rem / 2); flex: 1 1 100%;}
+    .tooltip-text { font-size: calc(2rem / 2);}
+    .mas { font-size: calc(2rem / 2);}
     .boletin{
         flex: 1 1 100%;
         display: flex;
@@ -306,66 +299,24 @@ i{
         z-index: 3;
     }
 }
-@media (min-width: 401px) and (max-width: 550px) {
-    #quienes-somos .logo {
-        width: 100%;
-        height: 50%;
-        padding: var(--main-padding);
-    }
-    #info{
-        width: 0;
-        height: 0px;
-        margin: var(--main-padding);
-        position: absolute;
-        top: 0px;
-        /* z-index: 3; */
-    }
-    #info-org, #info-territorio, #info-territorio, #info-motivo{
-        height: 400px;
-        left: 0vw;
-        top: 6vw;
-        position: absolute;
-        z-index: 3;
-    }
-}
-@media (min-width: 205px) and (max-width: 400px) {
-    .title h1{
-        font-size: calc(4rem / 3);
-    }
-    .mision-vision{
-        font-size: calc(2rem / 2.5);
-    }
-    i{
-        font-size: calc(2.5rem / 2.5);
-    }
-    #quienes-somos .logo {
-        width: 100%;
-        height: 50%;
-        opacity: 0.6;
-        position: relative;
-        /* z-index: 1; */
-        padding: var(--main-padding);
-    }
+@media (min-width: 205px) and (max-width: 550px) {
+    #quienes-somos { height: auto; }
+    #quienes-somos .logo { display: none; }
+    .title h1 { font-size: calc(4rem / 3); }
+    i { font-size: calc(2.5rem / 2.5); }
     /* BOX CONTAINER */
+    .box-container { display: flex;}
     .box-container .tooltip{
         font-size: calc(2.5rem / 3);
+        flex: 1 1 100%;
     }
-    .tooltip-text{
-        font-size: calc(2rem / 3);
-    }
-    .mas{
-        font-size: calc(2rem / 3);
-    }
+    .tooltip-text { font-size: calc(2rem / 3);}
+    .mas { font-size: calc(2rem / 3);}
     .boletin{
         flex: 1 1 100%;
         display: flex;
         flex-flow: row wrap;
         padding: 0px var(--main-padding) 0px var(--main-padding);
-        column-gap: 1vw;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: -10;
     }
     #info{
         width: 0;
@@ -375,7 +326,7 @@ i{
         top: 0px;
         z-index: 3;
     }
-    #info-org, #info-territorio, #info-territorio, #info-motivo{
+    #info-mision, #info-org, #info-territorio, #info-territorio, #info-motivo{
         height: 400px;
         left: 0vw;
         top: 10vw;
@@ -385,14 +336,9 @@ i{
 }
 
 /* Seccion de proyectos */
-#proyectos{
-    position : relative;
-}
 #proyectos .box-proyectos {
     display: flex;
     flex-flow: row wrap;
-    position: absolute;
-    top: 200px;
 }
 #proyectos .box-proyectos .items-proyectos{
     flex: 1 1 25%;
@@ -408,7 +354,7 @@ i{
     padding: 0px var(--main-padding);
     display: flex;
     flex-flow: row wrap;
-    margin: auto; add.
+    margin: auto;
 }
 .boletin{
     flex: 1 1 30%;
