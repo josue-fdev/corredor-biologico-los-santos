@@ -1,11 +1,15 @@
 *{
     box-sizing: border-box;
-    font-family: Roboto;
 }
-/* main font family */
 
+/* main font family */
+@font-face {
+    font-family: AXIS Extra Bold;
+    src: url(../font/Axis-Extrabold.otf);
+}
 /*--------- Variables globales for CBLS ---------- */
 :root{
+    --main-font-family: AXIS Extra Bold;
     --main-color: #66AA2A;
     /* variables de textos */
     --main-text-menu: 2rem;
@@ -18,29 +22,26 @@
     --main-button-text-size: 1rem;
     --main-button-text-color: #fff;
     /* variables de espaciado */
-    --main-width: 80vw;
-    --main-padding: 10vw;
+    --main-padding: 100px;
 }
 /* transitionaly animation menu */
-html{
-    scroll-behavior: smooth;
-}
 body{
-    background-image: linear-gradient(to bottom, #fff, #a5c48b, #000);
     padding: var(--main-padding);
 }
 
 /* ------------- SECCION QUIENES SOMOS ---------------- */
-#quienes-somos, #boletin-noticias, #proyectos{
+#quienes-somos{
     height: 100vh;
     margin: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     text-align: center;
-    box-shadow: -0px -0px 10px 3px rgb(230, 233, 227);
     border-radius: var(--main-button-border-radius);
     background-color: #fff;
+}
+#quienes-somos button, #quienes-somos .title h1{
+    font-family: var(--main-font-family);
 }
 /*  TITULO  */
 .title h1{
@@ -48,9 +49,9 @@ body{
     width: var(--main-width);
     color: var(--main-color);
     text-transform: uppercase;
-    font-size: var(--main-title);
+    /* font-size: var(--main-title); */
     /* add margin top of the nav size */
-    margin: 5vw 0 0 0;
+    /* margin: 5vw 0 0 0; */
     font-weight: 900;
 }
 .title h1 .title-1{
@@ -69,65 +70,12 @@ body{
     text-transform: uppercase;
     font-weight: 900;
 }
-/*
-/*  MISION Y VISION  */
-/* .mision-vision{
-    flex: 1 1 100%;
-    display: flex;
-    flex-flow: row wrap;
-    width: var(--main-width);
-    padding: 0px var(--main-padding);
-    column-gap: 0px;
-    font-size: var(--main-paragraph);
-}
-.mision, .vision{
-    flex: 1 1 50%;
-    margin: auto;
-    display: block;
-    flex-wrap: wrap;
-    border: none;
-    justify-content: center;
-    padding: 0px 0px 0px 200px;
-}
-.vision{
-    padding: 0px 200px 0px 0px;
-} */
+
 .tooltip i{
     flex: 1 1 100%;
     color: #000;
 }
-.mision span, .vision span{
-    text-transform: uppercase;
-    font-weight: 900;
-    color: var(--main-color);
-}
-i{
-    color: var(--main-color);
-    font-size: var(--main-subtitles);
-}
-/*  LOGO   */
-#quienes-somos .logo{
-    width: 60%;
-    height: 50%;
-    opacity: 1;
-    position: relative;
-    z-index: 1;
-    border-radius: 80px;
-}
-/*  CONTENEDOR OPCIONES  */
-.box-container{
-    flex: 1 1 100%;
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin: 50px 10vw 0px 10vw;
-    /* width: 40vw; */
-    /* padding: 2px; */
-    border: none;
-    background-color: white;
-    box-shadow: 0px 1px 1px rgb(230, 233, 227);
-}
+
 /* tooltip container */
 .tooltip{
     position: relative;
@@ -184,7 +132,7 @@ i{
     left: 0px;
     z-index: 3;
 }
-#info-mision, #info-org, #info-nacimiento, #info-territorio, #info-motivo {
+#info-org {
     display: none;
     width: 60vw;
     height: 400px;
@@ -210,27 +158,8 @@ i{
     .title h1{
         font-size: calc(4rem / 2);
     }
-    .mision-vision{
-        font-size: calc(2rem / 2);
-    }
-    i{
-        font-size: calc(2.5rem / 2);
-    }
-    #quienes-somos .logo {
-        width: 80%;
-        height: 90%;
-        opacity: 1;
-        /* margin: auto; */
-        position: relative;
-        top: -80px;
-        padding: var(--main-padding);
-    }
-    .box-container{
-        position: relative;
-        top: -200px;
-        z-index: 5;
-    }
-    .box-container .tooltip{
+    
+    .tooltip{
         font-size: calc(2.5rem / 2);
     }
     .tooltip-text{
@@ -247,7 +176,7 @@ i{
         left: 0px;
         z-index: 3;
     }
-    #info-org, #info-territorio, #info-territorio, #info-motivo{
+    #info-org{
         height: 420px;
         position: absolute;
         top: 1vw;
@@ -267,22 +196,9 @@ i{
         opacity: 1;
         padding: var(--main-padding);
     }
-    /* BOX CONTAINER */
-    .box-container { display: flex;}
-    .box-container .tooltip { font-size: calc(2.5rem / 2); flex: 1 1 100%;}
+    .tooltip { font-size: calc(2.5rem / 2); flex: 1 1 100%;}
     .tooltip-text { font-size: calc(2rem / 2);}
     .mas { font-size: calc(2rem / 2);}
-    .boletin{
-        flex: 1 1 100%;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 0px var(--main-padding) 0px var(--main-padding);
-        column-gap: 1vw;
-        position: relative;
-        left: -100px;
-        top: 100px;
-        z-index: -10;
-    }
     #info{
         width: 0;
         height: 0px;
@@ -291,7 +207,7 @@ i{
         top: 0px;
         z-index: 3;
     }
-    #info-org, #info-territorio, #info-territorio, #info-motivo{
+    #info-org{
         height: 400px;
         left: 0vw;
         top: 3vw;
@@ -304,9 +220,7 @@ i{
     #quienes-somos .logo { display: none; }
     .title h1 { font-size: calc(4rem / 3); }
     i { font-size: calc(2.5rem / 2.5); }
-    /* BOX CONTAINER */
-    .box-container { display: flex;}
-    .box-container .tooltip{
+    .tooltip{
         font-size: calc(2.5rem / 3);
         flex: 1 1 100%;
     }
@@ -326,69 +240,11 @@ i{
         top: 0px;
         z-index: 3;
     }
-    #info-mision, #info-org, #info-territorio, #info-territorio, #info-motivo{
+    #info-org{
         height: 400px;
         left: 0vw;
         top: 10vw;
         position: absolute;
         z-index: 3;
     }
-}
-
-/* Seccion de proyectos */
-#proyectos .box-proyectos {
-    display: flex;
-    flex-flow: row wrap;
-}
-#proyectos .box-proyectos .items-proyectos{
-    flex: 1 1 25%;
-    background:#66AA2A;
-    width: 150px;
-    height: 200px;
-    margin: 2px;
-}
-/* ----------------------SECCION DEL BOLETIN Y NOTICIAS ---------------------------------------- */
-.boletin-noticias{
-    width: var(--main-width);
-    height: 100vh;
-    padding: 0px var(--main-padding);
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-}
-.boletin{
-    flex: 1 1 30%;
-    display: flex;
-    flex-flow: row wrap;
-    margin: 20px 10px auto auto;
-}
-.uno{
-    flex: 1 1 100%;
-    border-radius: var(--main-button-border-radius);
-    padding: 0px 10px 10px 0px;
-}
-.noticias{
-    flex: 1 1 50%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto auto auto;
-}
-.noticia{
-    flex: 1 1 100%;
-    display: flex;
-    flex-flow: row wrap;
-    margin: auto;
-}
-.noticia .cuerpo{
-    flex: 1 1 70%;
-    margin: 0px;
-}
-.noticia .cuerpo:hover{box-shadow: 0px 1px 1px rgb(28, 29, 28);}
-.noticias .noticia .tres, .noticias .noticia .cuatro, .noticias .noticia .cinco{
-    flex: 1 1 30%;
-    width: 4vw;
-
-    /* height: 10vw; */
-    border-radius: var(--main-button-border-radius);
-    padding-bottom: 1px;
 }
