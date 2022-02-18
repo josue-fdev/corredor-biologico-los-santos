@@ -1,3 +1,19 @@
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+  }
 /* main font family */
 @font-face {
     font-family: AXIS Extra Bold;
@@ -27,9 +43,9 @@ body{
 
 /* Seccion Sobre Nosotros */
 /* Titulo */
-/* #quienes-somos{
-    height: 100vh;
-} */
+#quienes-somos{
+    position: relative;
+}
 #quienes-somos h1{
     font-family: var(--main-font-family);
     color: var(--main-color);
@@ -38,19 +54,14 @@ body{
 #quienes-somos .title-1{
     color: #000;
 }
-/* #quienes-somos h1:hover{
-    color: var(--main-color);
-}
-#quienes-somos .title-1:hover{
-    color: #000;
-}  */
 /* Parrafo */
 .conexion{
     font-size: 40px;
     font-family: var(--main-font-family);
+    /* margin-top: 100px; */
 }
 /* Button */
-.org{
+.mas{
     font-size: 1.2rem;
     font-family: var(--main-font-family);
     background: var(--main-color);
@@ -58,21 +69,24 @@ body{
     border-radius: 5px;
     padding: 5px;
 }
-org:hover{
+.mas:hover{
     letter-spacing: 0.2rem;
 }
+
 /* Box-text */
 #box-text p strong{
     color: var(--main-color);
 }
 #box-text{
+    display: none;
     width: 500px;
     height:300px;
     background-color: #ddd;
     position: absolute;
-    z-index: -10;
-    top: -100;
+    /* z-index: -10; */
+    /* top: 100; */
     overflow: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     margin: auto;
 }
