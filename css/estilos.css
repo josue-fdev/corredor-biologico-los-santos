@@ -56,6 +56,7 @@ body{
 }
 /* Parrafo */
 .conexion{
+    position: relative;
     font-size: 40px;
     font-family: var(--main-font-family);
     /* margin-top: 100px; */
@@ -79,14 +80,15 @@ body{
 }
 #box-text{
     display: none;
-    width: 500px;
-    height:300px;
+    /* width: 500px;
+    height:300px; */
     background-color: #ddd;
     position: absolute;
-    /* z-index: -10; */
-    /* top: 100; */
+    z-index: 10; 
+    top: 75px;
     overflow: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
     margin: auto;
+    margin-top: 16px;
 }
